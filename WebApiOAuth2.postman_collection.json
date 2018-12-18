@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c5c76fc1-930b-439d-8bc1-b729222c5efd",
+		"name": "WebApiOAuth2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3097/Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "UserName",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "adminpass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3097/Token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3097",
+					"path": [
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3097/api/WebApi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "JDG35O0JmbuwRSZi-Qvonu3byjfb6HFvptE9qfog_A8PcyugIjgivJ6iuQRFZALzd97HAiLDcg4X2H-hPStjgVFF4amrVVRiDYsOjyIYxqmbBLibwL3ATpUSgt24DEMKWfiHXOLX0trcNjYtU9omfYTgZz-AEC1frVp3fGUI2VFlH7Tj0hmdxPh64f1hF7nCbVdOkCTLQlumsHMHOnF_bXRVMpvo94pRWLBVsnXe8qc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3097/api/WebApi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3097",
+					"path": [
+						"api",
+						"WebApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3097/api/WebApi Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "JDG35O0JmbuwRSZi-Qvonu3byjfb6HFvptE9qfog_A8PcyugIjgivJ6iuQRFZALzd97HAiLDcg4X2H-hPStjgVFF4amrVVRiDYsOjyIYxqmbBLibwL3ATpUSgt24DEMKWfiHXOLX0trcNjYtU9omfYTgZz-AEC1frVp3fGUI2VFlH7Tj0hmdxPh64f1hF7nCbVdOkCTLQlumsHMHOnF_bXRVMpvo94pRWLBVsnXe8qc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3097/api/WebApi/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3097",
+					"path": [
+						"api",
+						"WebApi",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
